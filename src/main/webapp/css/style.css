@@ -1,0 +1,322 @@
+#topbanner{
+	background-attachment: fixed;
+    background-image: url(/images/intro.svg);
+    background-position: top right;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+body{
+	background: rgb(229, 240, 245);
+}
+/* Header */
+#hdr {
+    background: white;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    
+    /* Border bottom with gradient */
+    border-bottom: 3px solid transparent;
+    background: 
+        linear-gradient(white, white) padding-box, 
+        linear-gradient(90deg, #ff5733, #ffcc33, #33ccff) border-box;
+    border-bottom-width: 3px;
+    border-bottom-style: solid;
+
+    /* Box Shadow for depth */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Flexbox for Header Navigation */
+.hdrmnnv {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+/* Tabs */
+.tabs {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex-grow: 1; /* Pushes the login button to the right */
+}
+
+.tabs li {
+    padding: 10px 20px;
+}
+
+/* Tab Links */
+.hdrnv {
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+    border-bottom: 2px solid transparent;
+	font-family:Arial, Helvetica, sans-serif;
+}
+
+.hdrnv.active {
+    border-bottom: 2px solid #5e42a6;
+    font-weight: bold;
+}
+
+/* Login Button */
+.loginDv {
+    margin-left: auto; /* Pushes Login to the right */
+}
+
+.login {
+    background:#312450;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+	width:100px;
+}
+
+.login:hover {
+    background: #5e42a6;
+}
+
+/* Prevent Content from Hiding Under Fixed Header */
+.tab-content {
+    margin-top: 80px;
+}
+/* Tab Content */
+.tab-pane {
+    display: none; /* Hide all tabs by default */
+}
+
+.tab-pane.active {
+    display: block; /* Show only the active tab */
+}
+
+#loginBtn{
+	text-align: center;
+	font-family: Arial, Helvetica, sans-serif;
+	padding: 10px;
+}
+.login-container {
+    display: none;
+    background: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.login-container h2 {
+    text-align: center;
+}
+.input-group, .button-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+	padding:10px
+}
+.input-box {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+}
+.input-box input {
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    padding: 5px;
+}
+.button-box {
+    text-align: center;
+    background: #312450;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.button-box:hover {
+    background: #312450;
+}
+.login-options {
+    text-align: center;
+    margin-top: 10px;
+}
+.login-options a {
+    display: block;
+    text-decoration: none;
+    color: #5e42a6;
+    margin-top: 5px;
+}
+div#home{
+	font-family:calibri;
+}
+.header {
+       text-transform: uppercase;
+       font-weight: bold;
+       font-size: 18px;
+       letter-spacing: 1px;
+       margin-bottom: 10px;
+       position: relative;
+       display: inline-block;
+   }
+   .header::before {
+       content: "";
+       display: block;
+       width: 40px;
+       height: 3px;
+       background-color: #5e42a6;
+       margin-top: 5px;
+   }
+   .content {
+       display: flex;
+       justify-content: space-between;
+       align-items: flex-start;
+       padding: 20px;
+	   font-size:24px;
+   }
+   .content-text {
+       max-width: 60%;
+   }
+   .content img {
+       max-width: 35%;
+       height: auto;
+       border-radius: 8px;
+   }
+   .invst-img{background: url(/images/stock-6596910_640.jpg);}
+   .crypto-img{background: url(/images/crypto-6722635_640.jpg);}
+   .blkchn-img{background: url(/images/network-3539313_640.jpg);}
+   .invst-img,.crypto-img,.blkchn-img{
+	   width: 1000px;
+	   height: 250px;
+	   background-size: cover; /* Ensures it covers the div */
+	   background-position: center; /* Centers the image */
+	   background-repeat: no-repeat; /* Prevents repeating */
+   }
+
+   .invst .content-text,  .blkchn .content-text{
+		padding-left: 20px;
+	    padding-right: 50px;
+   }
+   .benefits-container {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      flex-wrap: wrap;
+  }
+  .benefit-box {
+      background: white;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      flex: 1;
+      min-width: 200px;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+	  height: 50px;
+  }
+  .benefit-box img {
+      width: 24px;
+      height: 24px;
+  }
+  .benefit-text {
+      font-weight: bold;
+  }
+.investment-tab {
+     padding: 10px 20px;
+     background: #007bff;
+     color: white;
+     cursor: pointer;
+     font-size: 16px;
+     display: inline-block;
+     margin: 20px;
+ }
+ .investment-tab:hover {
+     background: #0056b3;
+ }
+ /* Investment Panel (Initially Hidden) */
+ .investment-panel {
+	width: 250px;
+	height: 100vh;
+	position: fixed;
+	top: 50px;
+	background: #312450;
+	color: white;
+	padding-top: 20px;
+	transition: left 0.3s ease-in-out;
+	left: 0px;
+	font-family: calibri;
+ }
+ .sub-tab {
+     padding: 15px;
+     cursor: pointer;
+     border-bottom: 1px solid #444;
+     text-align: center;
+ }
+ .sub-tab:hover {
+     background: #312450;
+ }
+ /* Content Section */
+ .invst-content {
+     margin-left: 70px;
+     padding: 20px;
+     display: none;
+ }
+ .sub-tab.active{
+	font-weight:bold;
+ }
+ .invest-cnt-actv{
+	display:inline !important;
+ }
+ .contact-box {
+    background: white;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    width: 300px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+	margin: 0 0 0 500px;
+	font-family:calibri;
+}
+.form-group {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.contact-box button {
+    width: 100%;
+    padding: 10px;
+    background-color: #312450;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.contact-box button:hover {
+    background-color: #5e42a6;
+}
+.thank-you {
+    display: none;
+    color: green;
+    font-weight: bold;
+    margin-top: 10px;
+}
