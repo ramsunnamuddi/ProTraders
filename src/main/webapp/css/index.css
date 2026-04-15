@@ -1,0 +1,136 @@
+.header{
+	color: #444444;
+    background:linear-gradient(145deg, #000000, #1a1a1a);
+    padding: 10px 0;
+    transition: all 0.5s;
+}
+.logo{font-family:calibri;}
+.sticky-top {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 1020;
+	box-shadow:0px 2px 4px rgba(0, 0, 0, 0.3)
+}
+body{
+	margin:0px;
+}
+.align-items-center{align-items: center !important;}
+.position-relative{position:relative;}
+.d-flex{display:flex !important;}
+@media (min-width: 1400px) {
+    .container{max-width: 1320px;}
+}
+@media (min-width: 1200px) {
+    .container{max-width: 1140px;}
+}
+@media (min-width: 992px) {
+    .container{max-width: 960px;}
+}
+@media (min-width: 768px) {
+    .container{max-width: 720px;}
+}
+@media (min-width: 576px) {
+    .container{max-width: 540px;}
+}
+	.container{
+		width: 100%;
+	    padding-left: 10px;
+	    margin-right: auto;
+	    margin-left: 100px;
+	    gap: 530px;
+	}
+	*, ::after, ::before {
+	    box-sizing: border-box;
+	}
+	 .logo {
+	    line-height: 1;
+	}
+	.me-auto {
+	    margin-right: auto !important;
+	}
+	.nav-mn-itm {
+	    color: #1bbd36;
+	    text-decoration: none;
+	    transition: 0.3s;
+	}
+	.logo h1 {
+	    font-size: 26px;
+	    margin: 0;
+	    font-weight: 700;
+	    text-transform: uppercase;
+	    color: #111111;
+	}
+	.navmenu div:hover{
+		cursor: pointer;
+	}
+	@media (min-width: 1200px) {
+	    .navmenu div:hover, .navmenu .active, .navmenu .active:focus {
+	        color:#1bbd36;
+			font-weight: bold;
+	    }
+	}
+	.nav-mn-itm{
+		font-family:'OpenSans';
+		font-size:15px !important;
+	}
+	.logo span {
+	    color: var(--accent-color);
+	    font-size: 26px;
+	    font-weight: 700;
+	}
+	@media (min-width: 1200px) {
+	    .navmenu {
+	        padding: 0;
+	    }
+	}
+@media (min-width: 1200px) {
+    .navmenu ul {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        list-style: none;
+        align-items: center;
+    }
+}
+dl, ol, ul {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+ol, ul {
+    padding-left: 2rem;
+}
+@media (min-width: 1200px) {
+    .navmenu li {
+        position: relative;
+    }
+}
+@media (min-width: 1200px) {
+    .navmenu div {
+        color: #f8f8f8;
+        padding: 18px 15px;
+        font-size: 13px;	       
+        text-transform: uppercase;
+        font-weight: 300;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        white-space: nowrap;
+        transition: 0.3s;
+    }
+}
+@media (min-width: 1200px) {
+    .navmenu div i, .navmenu div:focus i {
+        font-size: 12px;
+        line-height: 0;
+        margin-left: 5px;
+        transition: 0.3s;
+    }
+}
+
+.submenu li{
+	padding: 5px;
+	position: relative;
+	line-height: 2;
+	border-bottom: 1px solid green;
+}

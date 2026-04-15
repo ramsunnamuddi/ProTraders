@@ -1,0 +1,114 @@
+.no-data-message {
+    text-align: center;
+    padding: 20px;
+    color: #888;
+    font-size: 16px;
+	font-family: 'OpenSans';
+}
+.ui-jqgrid-bdiv {
+    height: auto !important;
+}
+.ui-jqgrid-labels {
+    height: 50px;
+    font-family: 'OpenSans';
+    font-size: 16px;
+}
+.ui-jqgrid .ui-jqgrid-htable .ui-jqgrid-labels th div{
+	font-weight:bold;
+}
+.ui-jqgrid .ui-jqgrid-htable .ui-jqgrid-labels th div,.ui-jqgrid .ui-jqgrid-htable th.ui-th-ltr, .ui-th-ltr{
+	border:none;
+}
+.ui-jqgrid-jquery-ui.ui-jqgrid .ui-jqgrid-bdiv tr.ui-row-ltr>td {
+	border-color: inherit;
+	font-size: 13px;
+	line-height: 4;
+	border: none;
+	border-bottom: 1px solid;
+	font-family: 'OpenSans';
+	font-weight: 500;
+	color: #666666;
+}
+			
+div#tabs {
+    border: none;
+    background: none;
+	margin-top: 10px;
+}
+.ui-tabs .ui-tabs-nav {
+    width: 100%;
+    display: flex;
+    margin-top: 20px;
+    border-bottom: 1px solid #eee;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    border: none;
+    background: linear-gradient(145deg, #2a2a2a, #3d3d3d);
+	height: 51px;
+	border-radius:50px;
+	align-items:center;
+}
+
+#tabs ul li {
+	background: none;
+	border: none;
+	list-style: none;
+	color: #aaa;
+	cursor: pointer;
+	font-weight: 700;
+	border-bottom: solid 3px rgba(255, 255, 255, 0.0);
+	border-radius: 50px;
+	height: 50px;
+	align-content:center;
+	padding: 0px 20px;
+}
+
+#tabs ul li a {
+	font-size: 16px;
+    color: #888;
+    font-weight: 400;
+    text-decoration: none;
+    padding-bottom: 8px;
+    display: inline-block;
+    position: relative;
+    font-family: 'OpenSans';
+    letter-spacing: 1.5px;
+}
+#tabs ul li.ui-state-active.ui-state-hover{color:#ffffff;}
+
+#tabs ul li.ui-state-hover{color: #ffffff;}
+#tabs ul li.ui-state-hover a,li.ui-state-active.ui-state-hover a{color: #888888;}
+
+#tabs ul li.ui-tabs-active a {
+    color: #ffffff;
+	border-radius: 50px;
+	font-family: 'OpenSans';
+	font-weight: 600;
+}
+.ui-tabs .ui-tabs-nav li.ui-tabs-active {
+    margin-bottom: -1px;
+    padding-bottom: 1px;
+    border-radius: 50px;
+}
+
+/* Active tab underline */
+#tabs ul li.ui-tabs-active a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 3px;
+    background-color: linear-gradient(to right, #43E97D, #1BBD36) !important;;
+    transition: width 0.3s ease;
+}
+.ui-widget button {
+    border-radius: 30px;
+    width: 150px;
+    letter-spacing: 0.5px;
+    background: #333333;
+    border: none;
+    color: #ffffff;
+	cursor:pointer
+}
