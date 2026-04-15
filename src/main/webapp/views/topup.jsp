@@ -41,9 +41,8 @@
 								<c:choose>
 									<c:when test="${not empty pkgs}">
 										<c:set var="count" value="0" />
-	
-										<c:forEach var="pkg" items="${pkgs}">
-											 <option value="${fn:replace(pkg.pkg_amt, '\"', '')}">${fn:replace(pkg.pkg_amt, '\"', '')}</option>
+										<c:forEach var="amt" items="${dshbrdDtls.topupPieChart.pkg_amt}">
+										    <option value="${amt}">${amt}</option>
 										</c:forEach>
 									</c:when>
 	
@@ -152,10 +151,10 @@
 									<c:set var="count" value="0" />
 									<c:forEach var="pkg" items="${pkgs}">
 										<c:if test="${balance >= pkg.pkg_amt}">
-					                       <option value="${fn:replace(pkg.pkg_amt, '\"', '')}">
-					                           ${fn:replace(pkg.pkg_amt, '\"', '')}
-					                       </option>
-					                   </c:if>
+										    <option value="${pkg.pkg_amt}">
+										        ${pkg.pkg_amt}
+										    </option>
+										</c:if>
 									</c:forEach>
 								</c:when>
 							</c:choose>

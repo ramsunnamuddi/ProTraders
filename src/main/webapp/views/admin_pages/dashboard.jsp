@@ -577,7 +577,7 @@
             new Chart(document.getElementById('userGrowthChart'), {
                 type: 'line',
                 data: {
-                    labels: ${dshbrdDtls.userChart.labels},
+                	labels: ${fn:escapeXml(dshbrdDtls.userChart.labels)},
                     datasets: [{
                         label: 'New Users',
                         data: ${dshbrdDtls.userChart.data},

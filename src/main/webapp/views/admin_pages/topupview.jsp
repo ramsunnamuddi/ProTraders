@@ -40,14 +40,12 @@
 								<c:set var="count" value="0" />
 
 								<c:forEach var="amt" items="${dshbrdDtls.topupPieChart.pkg_amt}">
-									 <option value="${fn:replace(amt, '\"', '')}">${fn:replace(amt, '\"', '')}</option>
+								    <option value="${amt}">${amt}</option>
 								</c:forEach>
 							</c:when>
 
 							<c:otherwise>
-								<tr>
-									<td colspan="4" style="text-align:center;border:none;">No data available</td>
-								</tr>
+								 <option value="">No data available</option>
 							</c:otherwise>
 						</c:choose>
 					</select>
