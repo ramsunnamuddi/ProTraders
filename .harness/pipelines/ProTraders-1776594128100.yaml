@@ -26,6 +26,13 @@ pipeline:
                     command: echo hello world
                   timeout: ""
                   type: Run
+              - step:
+                  type: Run
+                  name: BUILD
+                  identifier: BUILD
+                  spec:
+                    shell: Sh
+                    command: mvn clean install
           platform:
             arch: Amd64
             os: Linux
