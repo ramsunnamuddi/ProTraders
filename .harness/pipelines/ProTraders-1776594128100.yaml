@@ -41,12 +41,13 @@ pipeline:
                       java -version
                       mvn clean install
           platform:
-            arch: Amd64
             os: Linux
+            arch: Amd64
           runtime:
-            spec: {}
             type: Cloud
+            spec: {}
         type: CI
+        description: ""
     - stage:
         name: test
         identifier: test
