@@ -38,3 +38,5 @@ pipeline:
                   spec:
                     shell: Sh
                     command: mvn clean install
+        delegateSelectors:
+          - docker-delegate
