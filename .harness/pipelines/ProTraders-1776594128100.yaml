@@ -1,6 +1,6 @@
 pipeline:
   identifier: Build_ramsunnamuddi_ProTraders_1776594131067
-  name: Build ProTraders
+  name: Build HarnessDemo
   orgIdentifier: default
   projectIdentifier: HarnessDemo
   properties:
@@ -75,4 +75,14 @@ pipeline:
                   identifier: testing
                   spec:
                     shell: Sh
-                    command: mvn test
+                    command: |-
+                      apt update
+                      apt install openjdk-21-jdk -y
+
+                      export JAVA_HOME=/usr/lib/jvm/java-21-openjdk-amd64
+                      export PATH=$JAVA_HOME/bin:$PATH
+
+                      java -version
+
+                      mvn test
+  tags: {}
