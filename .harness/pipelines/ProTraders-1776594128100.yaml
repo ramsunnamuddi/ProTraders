@@ -48,7 +48,7 @@ pipeline:
             type: Cloud
         type: CI
     - stage:
-        name: compile_test
+        name: test
         identifier: test
         description: ""
         type: CI
@@ -70,14 +70,7 @@ pipeline:
             steps:
               - step:
                   type: Run
-                  name: compile
-                  identifier: compile
-                  spec:
-                    shell: Sh
-                    command: mvn clean compile
-              - step:
-                  type: Run
-                  name: testing
+                  name: test
                   identifier: testing
                   spec:
                     shell: Sh
