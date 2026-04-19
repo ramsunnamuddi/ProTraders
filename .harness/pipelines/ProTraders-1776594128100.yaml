@@ -32,7 +32,14 @@ pipeline:
                   identifier: BUILD
                   spec:
                     shell: Sh
-                    command: mvn clean install
+                    command: |-
+                      apt update
+                      apt install openjdk-21-jdk -y
+                      export JAVA_HOME=/usr/lib/jvm/java-21-openjdk-amd64
+                      export PATH=$JAVA_HOME/bin:$PATH
+
+                      java -version
+                      mvn clean install
           platform:
             arch: Amd64
             os: Linux
