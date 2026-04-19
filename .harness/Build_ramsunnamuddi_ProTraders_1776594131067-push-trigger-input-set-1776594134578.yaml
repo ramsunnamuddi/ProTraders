@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_ramsunnamuddi_ProTraders_1776594131067-push-trigger-input-set
+  identifier: Build_ramsunnamuddi_ProTraders_1776594131067pushtriggerinputset
+  orgIdentifier: default
+  projectIdentifier: HarnessDemo
+  pipeline:
+    identifier: Build_ramsunnamuddi_ProTraders_1776594131067
+    properties:
+      ci:
+        codebase:
+          build:
+            type: branch
+            spec:
+              branch: <+trigger.branch>
