@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_ramsunnamuddi_ProTraders_1776594131067-pr-trigger-input-set
+  identifier: Build_ramsunnamuddi_ProTraders_1776594131067prtriggerinputset
+  orgIdentifier: default
+  projectIdentifier: HarnessDemo
+  pipeline:
+    identifier: Build_ramsunnamuddi_ProTraders_1776594131067
+    properties:
+      ci:
+        codebase:
+          build:
+            type: PR
+            spec:
+              number: <+trigger.prNumber>
