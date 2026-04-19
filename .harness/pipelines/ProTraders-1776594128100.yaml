@@ -47,3 +47,38 @@ pipeline:
             spec: {}
             type: Cloud
         type: CI
+    - stage:
+        name: compile_test
+        identifier: test
+        description: ""
+        type: CI
+        spec:
+          cloneCodebase: true
+          caching:
+            enabled: true
+            override: true
+            paths: []
+          buildIntelligence:
+            enabled: true
+          platform:
+            arch: Amd64
+            os: Linux
+          runtime:
+            spec: {}
+            type: Cloud
+          execution:
+            steps:
+              - step:
+                  type: Run
+                  name: compile
+                  identifier: compile
+                  spec:
+                    shell: Sh
+                    command: mvn clean compile
+              - step:
+                  type: Run
+                  name: testing
+                  identifier: testing
+                  spec:
+                    shell: Sh
+                    command: mvn test
