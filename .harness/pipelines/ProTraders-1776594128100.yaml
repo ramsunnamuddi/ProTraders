@@ -65,11 +65,11 @@ pipeline:
           buildIntelligence:
             enabled: true
           platform:
-            arch: Amd64
             os: Linux
+            arch: Amd64
           runtime:
-            spec: {}
             type: Cloud
+            spec: {}
           execution:
             steps:
               - step:
@@ -92,4 +92,6 @@ pipeline:
                       # DO NOT use snyk auth ❌
                       # just run test (token already in env)
                       snyk test --severity-threshold=high
+                    envVariables:
+                      SNYK_TOKEN: <+secrets.getValue("snyk-token")>
   tags: {}
