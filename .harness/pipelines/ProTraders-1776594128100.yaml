@@ -94,5 +94,5 @@ pipeline:
                       echo "token after printed..."
                       snyk test --severity-threshold=high
                     envVariables:
-                      SNYK_TOKEN: <+secrets.getValue("account.snyk-token")>
+                      SNYK_TOKEN: <+secrets.getValue("snyk-token")>
   tags: {}
