@@ -117,7 +117,9 @@ pipeline:
 
                       npm install -g snyk
 
-                      snyk auth $SNYK_TOKEN
+                      export SNYK_TOKEN=$SNYK_TOKEN
+
+                      snyk auth
 
                       snyk test --severity-threshold=high
   tags: {}
