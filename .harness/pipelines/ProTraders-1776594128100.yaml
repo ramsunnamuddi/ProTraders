@@ -85,4 +85,39 @@ pipeline:
                       java -version
 
                       mvn test
+    - stage:
+        name: snyk
+        identifier: snyk
+        description: ""
+        type: CI
+        spec:
+          cloneCodebase: true
+          caching:
+            enabled: true
+            override: true
+          buildIntelligence:
+            enabled: true
+          platform:
+            arch: Amd64
+            os: Linux
+          runtime:
+            spec: {}
+            type: Cloud
+          execution:
+            steps:
+              - step:
+                  type: Run
+                  name: snyk_scan
+                  identifier: snyk_scan
+                  spec:
+                    shell: Sh
+                    command: |-
+                      apt update
+                      apt install nodejs npm -y
+
+                      npm install -g snyk
+
+                      snyk auth $SNYK_TOKEN
+
+                      snyk test --severity-threshold=high
   tags: {}
