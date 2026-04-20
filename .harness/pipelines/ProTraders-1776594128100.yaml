@@ -40,51 +40,18 @@ pipeline:
 
                       java -version
                       mvn clean install
-          platform:
-            os: Linux
-            arch: Amd64
-          runtime:
-            type: Cloud
-            spec: {}
-        type: CI
-        description: ""
-    - stage:
-        name: test
-        identifier: test
-        description: ""
-        type: CI
-        spec:
-          cloneCodebase: true
-          caching:
-            enabled: true
-            override: true
-            paths: []
-          buildIntelligence:
-            enabled: true
-          platform:
-            arch: Amd64
-            os: Linux
-          runtime:
-            spec: {}
-            type: Cloud
-          execution:
-            steps:
-              - step:
-                  type: Run
-                  name: test
-                  identifier: testing
-                  spec:
-                    shell: Sh
-                    command: |-
-                      apt update
-                      apt install openjdk-21-jdk -y
 
-                      export JAVA_HOME=/usr/lib/jvm/java-21-openjdk-amd64
-                      export PATH=$JAVA_HOME/bin:$PATH
-
-                      java -version
+                      echo "=========installation completed========"
 
                       mvn test
+          platform:
+            os: Linux
+            arch: Amd64
+          runtime:
+            type: Cloud
+            spec: {}
+        type: CI
+        description: ""
     - stage:
         name: snyk
         identifier: snyk
