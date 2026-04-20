@@ -80,13 +80,16 @@ pipeline:
                     shell: Sh
                     command: |-
                       apt update
-                      apt install nodejs npm -y
 
+                      # install latest node (IMPORTANT)
+                      apt install -y curl
+                      curl -fsSL https://deb.nodesource.com/setup_18.x | bash -
+                      apt install -y nodejs
+
+                      # install snyk
                       npm install -g snyk
 
-                      export SNYK_TOKEN=$SNYK_TOKEN
-
-                      snyk auth
-
+                      # DO NOT use snyk auth ❌
+                      # just run test (token already in env)
                       snyk test --severity-threshold=high
   tags: {}
