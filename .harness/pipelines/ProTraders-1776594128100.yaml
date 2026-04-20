@@ -89,8 +89,8 @@ pipeline:
                       # install snyk
                       npm install -g snyk
 
-                      # DO NOT use snyk auth ❌
-                      # just run test (token already in env)
+                      echo "Checking token..."
+                      echo $SNYK_TOKEN
                       snyk test --severity-threshold=high
                     envVariables:
                       SNYK_TOKEN: <+secrets.getValue("snyk-token")>
